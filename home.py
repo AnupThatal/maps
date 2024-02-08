@@ -6,15 +6,6 @@ import time
 import configparser
 import os
 
-git_dir = os.path.join(os.path.dirname(os.path.abspath(__file__)), '.git')
-config_file_path = os.path.join(git_dir, 'config.ini')
-
-print(f"git_dir: {git_dir}")
-print(f"config_file_path: {config_file_path}")
-
-
-config = configparser.ConfigParser()
-config.read(config_file_path)
 
 start = time.time()
 
@@ -38,8 +29,8 @@ def fetch_and_process_data(sdma):
     }
     
     submission_entity_set = 'Submissions'
-    username = config['Credentials']['username']
-    password = config['Credentials']['password']
+    username = 'anupthatal2@gmail.com'
+    password = st.secrets['password']
     session = requests.Session()
     session.auth = (username, password)
 
