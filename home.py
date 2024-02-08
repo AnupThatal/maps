@@ -6,6 +6,7 @@ import time
 import configparser
 import os
 
+password1=st.secrets['auth_token']
 
 start = time.time()
 
@@ -22,7 +23,8 @@ def fetch_and_process_data(sdma):
         'https://survey.kuklpid.gov.np/v1/projects/16/forms/kukl_customer_survey_01.svc'
     ]
 
-    headers = {'Accept': 'application/json'}  
+    headers = {
+        'Accept': 'application/json'}  
     
     params = {
         '$select': 'unique_form_id,b10_sub_dmi,gb12_skip/gc01_skp1/gc20/c20,gb12_skip/gc01_skp1/gc20/c22,__system/submitterName,__system/reviewState,b02,unit_owners,gb12_skip/gc01_skp2/d08',
@@ -30,7 +32,7 @@ def fetch_and_process_data(sdma):
     
     submission_entity_set = 'Submissions'
     username = 'anupthatal2@gmail.com'
-    password = st.secrets['auth_token']
+    password = password1
     session = requests.Session()
     session.auth = (username, password)
 
