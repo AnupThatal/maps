@@ -30,7 +30,7 @@ def fetch_and_process_data(sdma):
     
     submission_entity_set = 'Submissions'
     username = 'anupthatal2@gmail.com'
-    password = st.secrets['password']
+    password = st.secrets['auth_token']
     session = requests.Session()
     session.auth = (username, password)
 
