@@ -7,7 +7,6 @@ import configparser
 import os
 
 password1=st.secrets['auth_token']
-st.write(password1)
 
 start = time.time()
 
