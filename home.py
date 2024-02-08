@@ -18,7 +18,7 @@ config.read(config_file_path)
 
 start = time.time()
 
-@st.cache_data
+@st.cache
 def fetch_and_process_data(sdma):
     odata_urls = [
         'https://survey.kuklpid.gov.np/v1/projects/7/forms/kukl_customer_survey_01.svc',
