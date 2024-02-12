@@ -95,8 +95,10 @@ if not result_df.empty:
         st.caption(f"Data of collection of that areas: {num}")
         tc=total['SDMA wise HHC'].values[0]
         areas=total['Areas'].values[0]
+        ward=total['ward number'].values[0]
         st.caption(f"Total data of that areas: {tc}")
         st.caption(f"Areas : {areas}")
+        st.caption(f"Ward : {ward}")
         if not selected_df.empty:
             fig = px.scatter_mapbox(selected_df, 
                                     lat='b02-Latitude', 
