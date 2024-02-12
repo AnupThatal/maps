@@ -94,6 +94,7 @@ if not result_df.empty:
         num=selected_df['unique_form_id'].nunique()
         st.caption(f"Data of collection of that areas: {num}")
         tc=total['SDMA wise HHC'].values[0]
+        areas=total['Areas'].values[0]
         st.caption(f"Total data of that areas: {tc}")
         if not selected_df.empty:
             fig = px.scatter_mapbox(selected_df, 
