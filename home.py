@@ -96,6 +96,7 @@ if not result_df.empty:
         tc=total['SDMA wise HHC'].values[0]
         areas=total['Areas'].values[0]
         st.caption(f"Total data of that areas: {tc}")
+        st.caption(f"Areas : {areas}")
         if not selected_df.empty:
             fig = px.scatter_mapbox(selected_df, 
                                     lat='b02-Latitude', 
