@@ -6,7 +6,6 @@ import time
 import configparser
 import os
 
-password1=st.secrets['auth_token']
 
 start = time.time()
 
@@ -32,7 +31,7 @@ def fetch_and_process_data(sdma):
     
     submission_entity_set = 'Submissions'
     username = 'anupthatal2@gmail.com'
-    password = password1
+    password = 'Super@8848
     session = requests.Session()
     session.auth = (username, password)
 
